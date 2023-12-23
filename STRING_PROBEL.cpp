@@ -5,12 +5,12 @@
 
 using namespace std;
 
-string squeezeText(const string& pishem) 
+string szhatieteksta(const string& stocha) 
 {
     string shzat;
     bool proverkaST = false;
 
-    for (char probel : pishem)
+    for (char probel : stocha)
     {
         if (probel == ' ')
         {
@@ -33,8 +33,11 @@ int main()
 {
     setlocale(LC_ALL, "RU");
 
-    string proverka1 = "      МОТИВАЦИЮ     НАДО     ПОДНЯТЬ       !!!!!!!";
-    string proverkaSHZATIA = squeezeText(proverka1);
+    string proverka1;
+    string proverkaSHZATIA;
+
+    proverka1 = "      МОТИВАЦИЮ     НАДО     ПОДНЯТЬ       !!!!!!!";
+    proverkaSHZATIA = szhatieteksta(proverka1);
 
     cout << "Текст без сжатия: " << proverka1 << endl;
     cout << "Текст с сжатием: " << proverkaSHZATIA << endl;
